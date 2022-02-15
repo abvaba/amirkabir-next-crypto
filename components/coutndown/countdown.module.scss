@@ -1,0 +1,20 @@
+@import "styles/vars/variables";
+.cContainer{
+  @apply relative flex flex-col items-center justify-center w-full md:w-1/4 my-16 md:my-0;
+  h2{
+    text-align: center !important;
+  }
+  p{
+    text-align: center;
+    color: $color-text-secondary;
+  }
+  svg{
+    position: absolute;
+    @apply w-1/4 md:w-full
+  }
+}
+
+.cTime{
+  font-family: sans-serif;
+  color: $color-text-green !important;
+}

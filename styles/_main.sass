@@ -1,0 +1,22 @@
+@import "utils/normalize"
+@import "utils/fonts"
+@import "vars/variables"
+@import "vars/tColors"
+@import "components/home"
+*::after,
+*::before
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  outline: none
+html
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-tap-highlight-color: transparent
+  font-size: clamp(1rem, 0.15rem + .15vw, 2rem)
+  line-height: 1.61803399
+  scroll-behavior: smooth
+  font-family: 'IRANYekan', sans-serif
+body
+  //background-image: linear-gradient(135deg, $purple-700 0%, $fuchsia-700 100%)
+  background-color: $bg-main

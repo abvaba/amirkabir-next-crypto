@@ -1,0 +1,20 @@
+$breakpoints: ("s": "640px","m": "768px","l": "1024px","x": "1280px","t": "1536px")
+@mixin mq($width, $type: min)
+  @if map_has_key($breakpoints, $width)
+    $width: map_get($breakpoints, $width)
+    @if $type == max
+      $width: $width - 1px
+    @media only screen and (#{$type}-width: $width)
+      @content
+%msh
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22)
+%airbnb
+  box-shadow: rgba(0, 0, 0, 0.18) 0 2px 4px
+=fz($min: 1, $rem: .15, $vw: .15, $max: 2)
+  font-size: clamp(#{$min}rem, #{$rem}rem + #{$vw}vw, #{$max}rem)
+=el($lineNumber: 3)
+  display: -webkit-box
+  text-overflow: ellipsis
+  -webkit-line-clamp: $lineNumber
+  -webkit-box-orient: vertical
+  overflow: hidden

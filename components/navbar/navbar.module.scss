@@ -1,0 +1,7 @@
+.nav{
+  @apply w-full flex flex-row items-center justify-center p-4 bg-slate-50	backdrop-blur relative;
+  z-index: 30;
+}
+.link{
+  @apply inline-block mx-4;
+}

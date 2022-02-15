@@ -1,0 +1,14 @@
+@import "styles/vars/variables";
+.link{
+  @apply w-full inline-flex flex-row items-center justify-end;
+  color: #fff;
+  &:hover{
+    color: $color-yellow;
+  }
+  svg {
+    margin-inline-start: 1rem;
+  }
+}
+.item{
+  @apply my-4;
+}

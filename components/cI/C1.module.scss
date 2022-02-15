@@ -1,0 +1,24 @@
+@import "styles/vars/variables";
+@import "styles/utils/mixins";
+.main{
+  @apply w-full flex flex-row items-center justify-start px-4 py-8 rounded-2xl;
+  margin-block-end: 1rem;
+  background-color: $bg-primary;
+  color: #ffffff;
+  h2{
+    @apply inline-block;
+    font-family: sans-serif;
+    @include fz($rem: 1.1);
+  }
+}
+.avatar{
+  @apply w-6 h-6;
+  margin-inline-start: 1rem;
+}
+.link{
+  @apply w-6 h-6 rounded-full p-1;
+  background-color: $color-bg-active;
+  svg{
+    @apply transform -rotate-45;
+  }
+}

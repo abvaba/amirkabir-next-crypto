@@ -1,0 +1,71 @@
+@import "styles/utils/mixins";
+@import "styles/vars/variables";
+.modal{
+  @apply w-full h-full flex-col	 items-center justify-center bg-gray-900	bg-opacity-90 z-50 fixed hidden;
+  inset-inline: 0;
+  inset-block: 0;
+  &.modal_open{
+    @apply flex;
+  }
+}
+.mainc3_info{
+  @apply w-full;
+  text-align: end;
+  color: #fff;
+  justify-content: space-between;
+  @include fz($rem: .5)
+}
+progress{
+  width: 100%;
+  height: .5rem;
+  margin-block-start: .5rem;
+  &::-webkit-progress-bar{
+    border-radius: 999px;
+    background-color: $orange;
+  }
+  &::-webkit-progress-value{
+    border-radius: 999px;
+    background-color: $color-bg-active;
+  }
+}
+input[type=checkbox]{
+  appearance: none;
+  width: 2.5rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background-color: $inputBg;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 9999px;
+    background-color: $color-text-secondary;
+    top: -.1rem;
+    right: 1.5rem;
+    transition:all .36s cubic-bezier(.78,.14,.15,.86);
+  }
+  &:checked{
+    &::after{
+      right: -.1rem;
+      background-color: $color-primary;
+    }
+  }
+}
+
+.menuUl{
+  @apply p-4 md:p-0 rounded-xl;
+  position: absolute;
+  background-color: $bg-primary;
+  display: block;
+  @include mq(m){
+    position: relative;
+  }
+  &.mHidden {
+    display: none;
+    @include mq(m){
+      display: block;
+    }
+  }
+}
